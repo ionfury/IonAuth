@@ -7,7 +7,7 @@
     },    
     {
       "parameter": "redirect_uri",
-      "value": "http://localhost:3000/auth"
+      "value": "http://ec2-18-220-36-223.us-east-2.compute.amazonaws.com:3000/login"
     },
     {
       "parameter": "response_type",
