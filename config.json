@@ -1,0 +1,21 @@
+{
+  "auth_url": "https://login.eveonline.com/oauth/authorize",
+  "auth_params": [
+    {
+      "parameter": "client_id",
+      "value": "2c76df7cec724a85acf6f0ced3f55a45"
+    },    
+    {
+      "parameter": "redirect_uri",
+      "value": "http://localhost:3000/auth"
+    },
+    {
+      "parameter": "response_type",
+      "value": "code"
+    },
+    {
+      "parameter": "scope",
+      "value": "publicData"
+    }
+  ]
+}
