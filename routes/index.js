@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var config = require('../config');
+var crypto = require('crypto');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,11 +10,11 @@ router.get('/', function(req, res, next) {
 
 router.get('/login', function(req, res, next) {
   var redirect_url = config.auth_url+"?"+config.auth_params.map(x => x.parameter+"="+x.value).join('&');
-  redirect_url += "&state=uniquestate123";
+  redirect_url += "&state=" + crypto.randomBytes(16).toString('hex');
 
   res.render('login', 
   { 
-    title: 'Please Login', 
+    title: 'Alcodot Auth', 
     image: 'eve_sso',
     redirect_url: redirect_url
   });
@@ -22,12 +23,9 @@ router.get('/login', function(req, res, next) {
 router.get('/auth', function(req, res, next) {
   res.render('auth',
   {
-    title: 'Authd',
+    title: 'Copy paste the following back into discord:',
     code: req.query.code
   });
 });
-
-https://login.eveonline.com/oauth/authorizeclient_id=2c76df7cec724a85acf6f0ced3f55a45&redirect_uri=http://localhost:3000/auth&response_type=code&scope=
-
 
 module.exports = router;
