@@ -2,8 +2,10 @@
   "name": "ionauth",
   "version": "0.0.0",
   "private": true,
+  "author": "Ion Fury <ionfury@gmail.com>",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
