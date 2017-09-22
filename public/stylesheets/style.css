@@ -20,9 +20,9 @@ canvas {
 }
 
 .panel {
-  font-family: 'Source Sans Pro';
-  font-size: 1.3em;
-  background: #eee;
+  font-family: 'Helvetica';
+  font-size: 16px;
+  background: #888b90;
   text-align: center;
   vertical-align: top;
   padding: 5px;
