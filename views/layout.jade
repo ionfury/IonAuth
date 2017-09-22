@@ -4,4 +4,9 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    div#particles-js
+    script(src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")
+    script(src="./scripts/particles.js")
+    
+    div.panel
+      block content
