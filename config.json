@@ -7,7 +7,7 @@
     },    
     {
       "parameter": "redirect_uri",
-      "value": "https://suad.space/auth"
+      "value": "http://suad.space/auth"
     },
     {
       "parameter": "response_type",
