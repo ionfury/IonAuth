@@ -7,7 +7,7 @@
     },    
     {
       "parameter": "redirect_uri",
-      "value": "http://ec2-18-220-36-223.us-east-2.compute.amazonaws.com:3000/auth"
+      "value": "suad.space/auth"
     },
     {
       "parameter": "response_type",

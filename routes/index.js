@@ -5,7 +5,7 @@ var crypto = require('crypto');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Landing' });
 });
 
 router.get('/login', function(req, res, next) {
