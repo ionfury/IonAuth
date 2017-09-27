@@ -3,7 +3,7 @@ const ESI = require('eve-swagger');
 const data = require('../compression.json');
 
 module.exports = function(app) {
-  app.post('/compression', (req, res) => {
+  app.get('/compression', (req, res) => {
     //clone a copy of our compression data to modify
     compression=JSON.parse(JSON.stringify(data));
     var query = res.req.query;
