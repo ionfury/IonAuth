@@ -12,8 +12,10 @@
     "cookie-parser": "~1.4.3",
     "crypto": "^1.0.1",
     "debug": "~2.6.3",
+    "eve-swagger": "^0.3.3",
     "express": "~4.15.2",
     "jade": "~1.11.0",
+    "javascript-lp-solver": "^0.4.5",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
   }
