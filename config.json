@@ -3,11 +3,11 @@
   "auth_params": [
     {
       "parameter": "client_id",
-      "value": "2c76df7cec724a85acf6f0ced3f55a45"
+      "value": "9cd89c72b376412ea5766833802b8e68"
     },    
     {
       "parameter": "redirect_uri",
-      "value": "http://suad.space/auth"
+      "value": "http://localhost:3000/auth"
     },
     {
       "parameter": "response_type",
@@ -15,7 +15,7 @@
     },
     {
       "parameter": "scope",
-      "value": "publicData"
+      "value": "esi-search.search_structures.v1 esi-universe.read_structures.v1 esi-markets.structure_markets.v1"
     }
   ]
 }
