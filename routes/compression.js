@@ -9,7 +9,9 @@ module.exports = function(app) {
     var query = res.req.query;
 
     var tritanium, pyerite, mexallon, isogen, nocxium, zydrine, megacyte, refineRate;
-    var useHighsec, useLowsec, useNullsec, useRaw;
+    var useHighsec, useLowsec, useNullsec, useRaw, useMinedVolume;
+    
+    var optimization_mode = "price";
 
     tritanium = validateInteger(query.tritanium);
     pyerite = validateInteger(query.pyerite);
@@ -23,6 +25,9 @@ module.exports = function(app) {
     useLowsec = validateBoolean(query.useLow);
     useNullsec = validateBoolean(query.useNull);
     useRaw = validateBoolean(query.useRaw);
+    useMinedVolume = validateBoolean(query.useMinedVolume);
+    
+    if(useMinedVolume) { optimization_mode = "minedvolume"; }
 
     ESI.types.prices()
     .then(prices => {
@@ -52,7 +57,7 @@ module.exports = function(app) {
     })
     .then(variables => {
       model = {
-        "optimize": "price",
+        "optimize": optimization_mode,
         "opType": "min",
         "constraints": {
           "tritanium": {"min": tritanium},
